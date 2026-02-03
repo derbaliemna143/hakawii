@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap');
+
+body {
+  background-color: #0f172a; /* خلفية داكنة */
+  color: white;
+  font-family: 'Tajawal', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* --- البداية --- */
+.hero {
+  text-align: center;
+  margin-top: 100px;
+}
+.hero h1 {
+  font-size: 4rem;
+  background: linear-gradient(to right, #c084fc, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- الأزرار --- */
+button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.1rem;
+}
+.btn-primary { background: #8b5cf6; color: white; }
+.btn-primary:hover { background: #7c3aed; transform: translateY(-3px); }
+.btn-pro { background: linear-gradient(45deg, #f59e0b, #d97706); color: white; width: 100%; }
+.btn-generate { background: #10b981; width: 100%; font-size: 1.2rem; margin-top: 20px;}
+.btn-back { background: transparent; color: #94a3b8; margin-top: 20px;}
+
+/* --- البطاقات والأسعار --- */
+.pricing-page { text-align: center; margin-top: 50px; }
+.cards-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.card {
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 20px;
+  width: 300px;
+  border: 1px solid #334155;
+  display: flex;
+  flex-direction: column;
+}
+.pro-card {
+  border: 2px solid #f59e0b;
+  position: relative;
+  background: linear-gradient(to bottom, #1e293b, #2b1d12);
+}
+.badge {
+  position: absolute;
+  top: -15px; left: 50%; transform: translateX(-50%);
+  background: #f59e0b; color: black; padding: 5px 15px;
+  border-radius: 20px; font-size: 0.8rem; font-weight: bold;
+}
+.card ul { text-align: right; list-style: none; padding: 0; margin: 20px 0; }
+.card li { margin: 10px 0; color: #cbd5e1; }
+
+/* --- التطبيق --- */
+.app-interface { width: 100%; max-width: 800px; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+.pro-tag { background: #f59e0b; padding: 2px 10px; border-radius: 5px; font-size: 0.8rem; }
+.trial-text { color: #f59e0b; font-size: 0.9rem; }
+
+.step-card { background: #1e293b; padding: 30px; border-radius: 20px; }
+textarea {
+  width: 100%; height: 150px; background: #0f172a; border: 2px solid #334155;
+  color: white; border-radius: 10px; padding: 15px; font-family: inherit; resize: none;
+  margin-top: 15px; box-sizing: border-box;
+}
+textarea:focus { outline: none; border-color: #8b5cf6; }
+
+/* --- اختيار الستايل --- */
+.styles-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.style-box {
+  background: #334155; padding: 10px 20px; border-radius: 10px; cursor: pointer;
+  position: relative;
+}
+.style-box.selected { background: #8b5cf6; color: white; }
+.style-box.locked { opacity: 0.5; cursor: not-allowed; }
+
+/* --- النتائج --- */
+.result-card { background: #1e293b; padding: 30px; border-radius: 20px; text-align: right; }
+.result-text { margin-bottom: 30px; border-bottom: 1px solid #334155; padding-bottom: 20px; }
+.result-image img { width: 100%; border-radius: 15px; margin-top: 10px; }
+.lock-msg { color: #f87171; font-size: 0.9rem; text-align: center; margin-top: 5px; }
+.actions { margin-top: 30px; display: flex; justify-content: center; }
